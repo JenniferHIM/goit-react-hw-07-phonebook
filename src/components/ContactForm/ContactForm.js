@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { phoneOperations, phoneSelectors } from 'redux/phonebook';
+import { phoneOperations, phoneSelectors } from '../../redux/phonebook';
 import { toast } from 'react-toastify';
-import s from './ContactForm.module.css';
+import styles from './ContactForm.module.css';
 
 const ContactForm = () => {
   const [contactName, setContactName] = useState('');
@@ -10,8 +10,8 @@ const ContactForm = () => {
   const contacts = useSelector(state => phoneSelectors.getContacts(state));
   const dispatch = useDispatch();
 
-  const handleSubmit = evt => {
-    evt.preventDefault();
+  const handleSubmit = e => {
+    e.preventDefault();
 
     if (checkContacts(contacts, contactName)) {
       toast.error(`${contactName} is already in contacts.`);
@@ -42,10 +42,10 @@ const ContactForm = () => {
   };
 
   return (
-    <form className={s.newContacsForm} onSubmit={handleSubmit}>
-      <h2 className={s.title}>Add new contacts:</h2>
-      <label className={s.label}>
-        <span className={s.labelTitle}>Name:</span>
+    <form className={styles.newContacsForm} onSubmit={handleSubmit}>
+      <h2 className={styles.title}>Add new contacts:</h2>
+      <label className={styles.label}>
+        <span className={styles.labelTitle}>Name:</span>
         <input
           type="text"
           onChange={changeInput}
@@ -55,8 +55,8 @@ const ContactForm = () => {
           required
         />
       </label>
-      <label className={s.label}>
-        <span className={s.labelTitle}>Phone:</span>
+      <label className={styles.label}>
+        <span className={styles.labelTitle}>Phone:</span>
         <input
           type="text"
           onChange={changeInput}
@@ -67,7 +67,7 @@ const ContactForm = () => {
         />
       </label>
 
-      <button type="submit" className={s.addBtn}>
+      <button type="submit" className={styles.addBtn}>
         Add
       </button>
     </form>

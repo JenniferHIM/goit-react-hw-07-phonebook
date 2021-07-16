@@ -4,7 +4,7 @@ import { phoneOperations, phoneSelectors } from 'redux/phonebook';
 
 import { MdAccountCircle } from 'react-icons/md';
 import { CgCloseO } from 'react-icons/cg';
-import s from './ContactList.module.css';
+import styles from './ContactList.module.css';
 
 const ContactList = () => {
   const dispatch = useDispatch();
@@ -14,17 +14,17 @@ const ContactList = () => {
 
   useEffect(() => dispatch(phoneOperations.fetchContacts()), [dispatch]);
 
-  console.log(contacts);
+  // console.log(contacts);
 
   return (
-    <ul className={s.contacsList}>
+    <ul className={styles.contactsList}>
       {contacts.map(({ id, contactName, contactNumber }) => (
-        <li key={id} className={s.item}>
+        <li key={id} className={styles.item}>
           <MdAccountCircle />
-          <span className={s.name}>{contactName}</span>: {contactNumber}
+          <span className={styles.name}>{contactName}</span>: {contactNumber}
           <button
             type="button"
-            className={s.closeBtn}
+            className={styles.closeBtn}
             onClick={() => dispatch(phoneOperations.deleteContacts(id))}
           >
             <CgCloseO />
