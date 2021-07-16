@@ -1,13 +1,14 @@
 .newContacsForm {
   padding: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  margin-bottom: 5px;
+  border: 1px solid white;
   border-radius: 5px;
 }
 
 .title {
   margin-bottom: 10px;
   font-size: 16px;
-  color: blueviolet;
+  color: white;
 }
 
 .label {
@@ -20,12 +21,14 @@
   display: inline-block;
   width: 50px;
   margin-right: 10px;
+
+  color: white;
 }
 
 input {
   padding: 10px;
 
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  border: 1px solid white;
   border-radius: 5px;
   font-size: 16px;
   font-weight: 500;
@@ -41,16 +44,16 @@ input:focus::placeholder {
   opacity: 0;
 }
 
-.button {
+.addBtn {
   display: block;
   min-width: 100px;
   padding: 5px;
 
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  border: 1px solid white;
   border-radius: 5px;
   font-size: 16px;
   font-weight: 500;
-  background-color: rgb(78, 78, 230);
+  background-color: blue;
   color: white;
   outline: none;
   cursor: pointer;
@@ -58,7 +61,7 @@ input:focus::placeholder {
   transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
 }
 
-.button:hover {
+.addBtn:hover {
   background-color: lightblue;
-  color: rgb(75, 75, 44);
+  color: black;
 }
