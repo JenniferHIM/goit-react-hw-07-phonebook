@@ -1,9 +1,4 @@
 {
-  "contacts": [
-    {
-      "name": "Jennifer",
-      "number": "415-33-12",
-      "id": 1
-    }
-  ]
+  "contacts": []
+  
 }

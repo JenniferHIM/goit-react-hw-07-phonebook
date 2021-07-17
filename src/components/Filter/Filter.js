@@ -13,7 +13,7 @@ const Filter = () => {
         <span className={styles.labelTitle}>find:</span>
         <input
           type="text"
-          onChange={evt => dispatch(phoneActions.filter(evt.target.value))}
+          onChange={e => dispatch(phoneActions.filter(e.target.value))}
           value={value}
           name="filter"
           placeholder="input name"

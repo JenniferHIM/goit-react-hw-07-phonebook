@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { phoneOperations, phoneSelectors } from '../../redux/phonebook';
+import { phoneOperations, phoneSelectors } from 'redux/phonebook';
 import { toast } from 'react-toastify';
 import styles from './ContactForm.module.css';
 

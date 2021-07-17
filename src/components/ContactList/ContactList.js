@@ -14,10 +14,10 @@ const ContactList = () => {
 
   useEffect(() => dispatch(phoneOperations.fetchContacts()), [dispatch]);
 
-  // console.log(contacts);
+  console.log(contacts);
 
   return (
-    <ul className={styles.contactsList}>
+    <ul className={styles.contacsList}>
       {contacts.map(({ id, contactName, contactNumber }) => (
         <li key={id} className={styles.item}>
           <MdAccountCircle />
